@@ -42,6 +42,8 @@ curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o 
 
 apt-get update && ACCEPT_EULA=Y apt-get install -y msodbcsql18
 
+apt install python3-pip
+
 pip install -r requirements.txt
 
 uvicorn app:app --host 0.0.0.0 --port 8000
